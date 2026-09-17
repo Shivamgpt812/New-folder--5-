@@ -1,0 +1,129 @@
+.manufacturing-stat {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.manufacturing-stat__icon-box {
+  width: 68px;
+  height: 68px;
+  background: rgba(4, 42, 75, 0.8);
+  border: 1px solid rgba(25, 135, 235, 0.28);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.manufacturing-stat__icon {
+  color: #159AFF;
+  transition: transform 0.3s ease;
+}
+
+.manufacturing-stat:hover .manufacturing-stat__icon-box {
+  background: rgba(4, 42, 75, 0.95);
+  border-color: rgba(25, 135, 235, 0.4);
+}
+
+.manufacturing-stat:hover .manufacturing-stat__icon {
+  transform: scale(1.1);
+}
+
+.manufacturing-stat__content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.manufacturing-stat__value {
+  font-size: 30px;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+}
+
+.manufacturing-stat__label {
+  font-size: 14px;
+  color: #A7BCD0;
+  line-height: 1.3;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1199px) {
+  .manufacturing-stat {
+    gap: 16px;
+  }
+  
+  .manufacturing-stat__icon-box {
+    width: 62px;
+    height: 62px;
+  }
+  
+  .manufacturing-stat__icon {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .manufacturing-stat__value {
+    font-size: 28px;
+  }
+  
+  .manufacturing-stat__label {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 767px) {
+  .manufacturing-stat {
+    gap: 14px;
+  }
+  
+  .manufacturing-stat__icon-box {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+  }
+  
+  .manufacturing-stat__icon {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .manufacturing-stat__value {
+    font-size: 24px;
+  }
+  
+  .manufacturing-stat__label {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .manufacturing-stat {
+    gap: 10px;
+  }
+  
+  .manufacturing-stat__icon-box {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+  }
+  
+  .manufacturing-stat__icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .manufacturing-stat__value {
+    font-size: 20px;
+  }
+  
+  .manufacturing-stat__label {
+    font-size: 11px;
+    line-height: 1.25;
+  }
+}

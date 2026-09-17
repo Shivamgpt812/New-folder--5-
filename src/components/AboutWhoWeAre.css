@@ -1,0 +1,318 @@
+/* ==========================================================================
+   WHO WE ARE SECTION - MODERN ATRONICS LIGHT THEME
+   ========================================================================== */
+
+.about-who-section {
+  position: relative;
+  background: #FFFFFF;
+  padding: 100px 48px;
+  overflow: hidden;
+  border-top: 1px solid rgba(8, 123, 255, 0.08);
+}
+
+.who-bg-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(circle, rgba(8, 123, 255, 0.05) 1px, transparent 1px);
+  background-size: 28px 28px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.who-container {
+  max-width: 1550px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* Left Content Column */
+.who-left-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.who-section-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.who-badge-line {
+  width: 28px;
+  height: 2.5px;
+  background: #087BFF;
+  border-radius: 2px;
+}
+
+.who-badge-text {
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+  color: #087BFF;
+  text-transform: uppercase;
+}
+
+.who-main-heading {
+  font-size: clamp(34px, 3.6vw, 48px);
+  font-weight: 850;
+  line-height: 1.12;
+  color: #051429;
+  letter-spacing: -1px;
+  margin: 0 0 10px 0;
+}
+
+.who-heading-accent {
+  color: #087BFF;
+}
+
+.who-handwritten-note {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.who-handwritten-note span {
+  font-family: 'Caveat', cursive;
+  font-size: 22px;
+  font-weight: 700;
+  color: #087BFF;
+  transform: rotate(-1.5deg);
+}
+
+.who-handwritten-note svg {
+  margin-top: -3px;
+}
+
+.who-lead-text {
+  font-size: 15.5px;
+  line-height: 1.7;
+  color: #475569;
+  margin: 0 0 28px 0;
+  max-width: 680px;
+}
+
+/* Capability Cards Grid */
+.who-capabilities-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.who-cap-card {
+  background: #F8FAFC;
+  border: 1px solid rgba(8, 123, 255, 0.12);
+  border-radius: 14px;
+  padding: 18px 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.who-cap-card:hover {
+  background: #FFFFFF;
+  border-color: rgba(8, 123, 255, 0.35);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(8, 123, 255, 0.08);
+}
+
+.who-cap-icon-box {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: rgba(8, 123, 255, 0.1);
+  color: #087BFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.25s ease;
+}
+
+.who-cap-card:hover .who-cap-icon-box {
+  background: #087BFF;
+  color: #FFFFFF;
+  transform: scale(1.05);
+}
+
+.who-cap-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.who-cap-title {
+  font-size: 14.5px;
+  font-weight: 750;
+  color: #0F172A;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.who-cap-desc {
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: #64748B;
+  margin: 0;
+}
+
+/* Right Visual Image Frame */
+.who-right-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.who-image-frame {
+  position: relative;
+  border-radius: 24px;
+  overflow: visible;
+  width: 100%;
+  max-width: 580px;
+  border: 1px solid rgba(8, 123, 255, 0.18);
+  box-shadow: 0 24px 60px rgba(11, 18, 32, 0.12), 0 0 40px rgba(8, 123, 255, 0.06);
+}
+
+.who-main-img {
+  width: 100%;
+  height: 460px;
+  object-fit: cover;
+  display: block;
+  border-radius: 23px;
+}
+
+.who-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 23px;
+  background: linear-gradient(180deg, rgba(5, 20, 41, 0.02) 0%, rgba(5, 20, 41, 0.35) 100%);
+  pointer-events: none;
+}
+
+/* Floating Badges */
+.who-float-badge {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(8, 123, 255, 0.25);
+  box-shadow: 0 16px 36px rgba(5, 20, 41, 0.12);
+  border-radius: 14px;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 5;
+  animation: floatBounce 4s ease-in-out infinite;
+}
+
+@keyframes floatBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.who-badge-top {
+  top: 24px;
+  right: -20px;
+}
+
+.who-badge-bottom {
+  bottom: 24px;
+  left: -20px;
+  animation-delay: 2s;
+}
+
+.who-float-icon-wrap {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: rgba(16, 185, 129, 0.12);
+  color: #10B981;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.who-float-icon-wrap.blue {
+  background: rgba(8, 123, 255, 0.12);
+  color: #087BFF;
+}
+
+.who-float-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.float-bold {
+  font-size: 13px;
+  font-weight: 800;
+  color: #0F172A;
+  line-height: 1.2;
+}
+
+.float-sub {
+  font-size: 11px;
+  font-weight: 500;
+  color: #64748B;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .about-who-section {
+    padding: 70px 32px;
+  }
+
+  .who-container {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .who-badge-top {
+    right: 12px;
+  }
+
+  .who-badge-bottom {
+    left: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-who-section {
+    padding: 55px 16px 40px;
+  }
+
+  .who-capabilities-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .who-main-img {
+    height: 320px;
+  }
+
+  .who-badge-top,
+  .who-badge-bottom {
+    position: static;
+    margin-top: 10px;
+  }
+
+  .who-right-visual {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}

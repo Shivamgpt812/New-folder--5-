@@ -1,0 +1,100 @@
+.capabilities-intro {
+  margin-bottom: 30px;
+}
+
+.capabilities-intro__heading {
+  font-size: 64px;
+  font-weight: 780;
+  line-height: 1.0;
+  letter-spacing: -2.5px;
+  color: #071B3A;
+  margin: 0 0 22px 0;
+}
+
+.capabilities-intro__heading-line1 {
+  display: block;
+}
+
+.capabilities-intro__heading-line2 {
+  display: block;
+}
+
+.capabilities-intro__heading-highlight {
+  color: #087BFF;
+}
+
+.capabilities-intro__description {
+  font-size: 17px;
+  line-height: 1.55;
+  color: #6C7E98;
+  max-width: 550px;
+  margin: 0;
+}
+
+/* Desktop */
+@media (max-width: 1399px) {
+  .capabilities-intro__heading {
+    font-size: 60px;
+    letter-spacing: -2.3px;
+  }
+
+  .capabilities-intro__description {
+    font-size: 16px;
+    max-width: 520px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 1199px) {
+  .capabilities-intro__heading {
+    font-size: 58px;
+    letter-spacing: -2px;
+  }
+}
+
+/* Small Tablet */
+@media (max-width: 991px) {
+  .capabilities-intro {
+    margin-bottom: 28px;
+  }
+
+  .capabilities-intro__heading {
+    font-size: 54px;
+    letter-spacing: -1.8px;
+    margin-bottom: 20px;
+  }
+
+  .capabilities-intro__description {
+    max-width: 100%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .capabilities-intro {
+    margin-bottom: 22px;
+  }
+
+  .capabilities-intro__heading {
+    font-size: clamp(30px, 7.5vw, 42px);
+    letter-spacing: -1.2px;
+    line-height: 1.05;
+    margin-bottom: 14px;
+  }
+
+  .capabilities-intro__description {
+    font-size: 14.5px;
+    line-height: 1.55;
+  }
+}
+
+@media (max-width: 480px) {
+  .capabilities-intro__heading {
+    font-size: clamp(26px, 8vw, 34px);
+    letter-spacing: -1px;
+  }
+
+  .capabilities-intro__description {
+    font-size: 13.5px;
+  }
+}

@@ -1,0 +1,112 @@
+.capabilities-support-bar {
+  width: 96%;
+  margin: 0 auto;
+  min-height: 125px;
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(80, 140, 200, 0.14);
+  border-radius: 20px;
+  box-shadow: 0 12px 35px rgba(50, 100, 160, 0.07);
+  padding: 28px 32px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.capabilities-support-bar__features {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.capabilities-support-bar__separator {
+  width: 1px;
+  height: 50px;
+  background: rgba(100, 140, 180, 0.18);
+}
+
+.capabilities-support-bar__cta {
+  flex-shrink: 0;
+}
+
+/* Animation */
+@media (prefers-reduced-motion: no-preference) {
+  .capabilities-support-bar {
+    animation: fadeSlideUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+  }
+
+  @keyframes fadeSlideUp {
+    from {
+      opacity: 0;
+      transform: translateY(15px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* Tablet */
+@media (max-width: 1199px) {
+  .capabilities-support-bar {
+    padding: 24px 28px;
+    gap: 20px;
+  }
+
+  .capabilities-support-bar__features {
+    gap: 26px;
+  }
+}
+
+/* Small Tablet */
+@media (max-width: 991px) {
+  .capabilities-support-bar {
+    flex-direction: column;
+    padding: 32px 28px;
+    gap: 28px;
+    min-height: auto;
+  }
+
+  .capabilities-support-bar__features {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .capabilities-support-bar__separator {
+    display: none;
+  }
+
+  .capabilities-support-bar__cta {
+    width: 100%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .capabilities-support-bar {
+    width: 100%;
+    padding: 24px 18px;
+    border-radius: 16px;
+  }
+
+  .capabilities-support-bar__features {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .capabilities-support-bar {
+    padding: 20px 14px;
+  }
+
+  .capabilities-support-bar__features {
+    gap: 16px;
+  }
+}

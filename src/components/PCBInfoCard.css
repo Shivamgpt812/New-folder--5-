@@ -1,0 +1,188 @@
+.pcb-info-card {
+  position: absolute;
+  width: 245px;
+  height: 130px;
+  padding: 20px 22px;
+  background: rgba(255, 255, 255, 0.4) !important;
+  backdrop-filter: blur(30px) !important;
+  -webkit-backdrop-filter: blur(30px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15) !important;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  z-index: 10;
+  animation: fade-in-up 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.pcb-info-card-1 {
+  top: -10px;
+  right: -30px;
+  animation-delay: 0.4s;
+  background: rgba(255, 255, 255, 0.3) !important;
+  backdrop-filter: blur(35px) !important;
+  -webkit-backdrop-filter: blur(35px) !important;
+}
+
+.pcb-info-card-2 {
+  top: 245px;
+  right: -20px;
+  animation-delay: 0.6s;
+}
+
+.pcb-info-card-3 {
+  bottom: 25px;
+  right: 10px;
+  animation-delay: 0.8s;
+}
+
+.pcb-info-card-icon {
+  width: 56px;
+  height: 56px;
+  min-width: 56px;
+  background: #EEF6FF;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #087BFF;
+}
+
+.pcb-info-card-icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.pcb-info-card-content {
+  flex: 1;
+}
+
+.pcb-info-card-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #071B3A;
+  line-height: 1.25;
+  margin-bottom: 6px;
+}
+
+.pcb-info-card-description {
+  font-size: 14px;
+  line-height: 1.4;
+  color: #6B7C93;
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pcb-info-card {
+    animation: none;
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1199px) {
+  .pcb-info-card {
+    width: 220px;
+    height: 120px;
+    padding: 18px 20px;
+  }
+  
+  .pcb-info-card-1 {
+    right: -10px;
+    top: 10px;
+  }
+  
+  .pcb-info-card-2 {
+    right: -25px;
+    top: 210px;
+  }
+  
+  .pcb-info-card-3 {
+    right: 5px;
+    bottom: 20px;
+  }
+  
+  .pcb-info-card-icon {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+  }
+  
+  .pcb-info-card-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .pcb-info-card-title {
+    font-size: 15px;
+  }
+  
+  .pcb-info-card-description {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .pcb-info-card {
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+    right: auto !important;
+    left: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+    margin-bottom: 12px;
+    padding: 16px 18px !important;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.75) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border: 1px solid rgba(8, 123, 255, 0.15) !important;
+    box-shadow: 0 4px 20px rgba(8, 123, 255, 0.08) !important;
+  }
+
+  .pcb-info-card-icon {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    border-radius: 10px;
+  }
+
+  .pcb-info-card-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .pcb-info-card-title {
+    font-size: 14px;
+    margin-bottom: 3px;
+  }
+
+  .pcb-info-card-description {
+    font-size: 12.5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pcb-info-card {
+    padding: 14px 14px !important;
+    gap: 12px;
+  }
+
+  .pcb-info-card-icon {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+  }
+}

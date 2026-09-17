@@ -1,0 +1,246 @@
+/* ==========================================================================
+   WHAT WE DO SECTION - MODERN ATRONICS LIGHT THEME
+   ========================================================================== */
+
+.about-what-section {
+  position: relative;
+  background: #F4F7FB;
+  padding: 100px 48px;
+  overflow: hidden;
+  border-top: 1px solid rgba(8, 123, 255, 0.08);
+}
+
+.what-bg-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(circle, rgba(8, 123, 255, 0.06) 1px, transparent 1px);
+  background-size: 28px 28px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.what-container {
+  max-width: 1550px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Header */
+.what-header {
+  text-align: center;
+  max-width: 840px;
+  margin: 0 auto 56px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.what-section-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.what-badge-line {
+  width: 28px;
+  height: 2.5px;
+  background: #087BFF;
+  border-radius: 2px;
+}
+
+.what-badge-text {
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+  color: #087BFF;
+  text-transform: uppercase;
+}
+
+.what-main-heading {
+  font-size: clamp(34px, 3.6vw, 48px);
+  font-weight: 850;
+  line-height: 1.12;
+  color: #051429;
+  letter-spacing: -1px;
+  margin: 0 0 10px 0;
+}
+
+.what-heading-accent {
+  color: #087BFF;
+}
+
+.what-handwritten-note {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.what-handwritten-note span {
+  font-family: 'Caveat', cursive;
+  font-size: 22px;
+  font-weight: 700;
+  color: #087BFF;
+  transform: rotate(-1.5deg);
+}
+
+.what-handwritten-note svg {
+  margin-top: -3px;
+}
+
+.what-header-desc {
+  font-size: 15.5px;
+  line-height: 1.7;
+  color: #475569;
+  margin: 0;
+  max-width: 720px;
+}
+
+/* Cards Grid */
+.what-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.what-cap-card {
+  background: #FFFFFF;
+  border: 1px solid rgba(8, 123, 255, 0.12);
+  border-radius: 18px;
+  padding: 24px 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 18px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 18px rgba(11, 18, 32, 0.03);
+}
+
+.what-cap-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(8, 123, 255, 0.4);
+  box-shadow: 0 16px 36px rgba(8, 123, 255, 0.1);
+}
+
+.what-card-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.what-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(8, 123, 255, 0.08);
+  color: #087BFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+}
+
+.what-cap-card:hover .what-icon-box {
+  background: #087BFF;
+  color: #FFFFFF;
+  transform: scale(1.06);
+}
+
+.what-tag-pill {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #087BFF;
+  background: rgba(8, 123, 255, 0.08);
+  padding: 4px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+
+.what-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.what-card-title {
+  font-size: 16px;
+  font-weight: 750;
+  color: #0F172A;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.what-card-desc {
+  font-size: 13px;
+  line-height: 1.55;
+  color: #64748B;
+  margin: 0;
+}
+
+.what-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 14px;
+  border-top: 1px solid rgba(8, 123, 255, 0.08);
+}
+
+.what-link-text {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #087BFF;
+}
+
+.what-arrow-icon {
+  color: #087BFF;
+  transition: transform 0.2s ease;
+}
+
+.what-cap-card:hover .what-arrow-icon {
+  transform: translateX(4px);
+}
+
+/* Responsive */
+@media (max-width: 1280px) {
+  .what-cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  .about-what-section {
+    padding: 70px 32px;
+  }
+
+  .what-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-what-section {
+    padding: 55px 16px 40px;
+  }
+
+  .what-header {
+    margin-bottom: 36px;
+  }
+
+  .what-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .what-cap-card {
+    padding: 20px 18px;
+    border-radius: 16px;
+  }
+}

@@ -1,0 +1,210 @@
+/* =========================================================
+   ATRONICS CONTACT FAQ ACCORDION SECTION
+   ========================================================= */
+
+.contact-faq-section {
+  position: relative;
+  background: #F8FAFD;
+  padding: 90px 48px 100px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.contact-faq-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* Header */
+.contact-faq-header {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.contact-faq-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-badge-line {
+  width: 28px;
+  height: 2.5px;
+  background: #087BFF;
+  border-radius: 2px;
+}
+
+.contact-badge-text {
+  font-size: 11.5px;
+  font-weight: 750;
+  letter-spacing: 1.6px;
+  color: #087BFF;
+  text-transform: uppercase;
+}
+
+.contact-faq-title {
+  font-size: 42px;
+  font-weight: 850;
+  line-height: 1.15;
+  color: #051429;
+  letter-spacing: -1px;
+  margin: 0;
+}
+
+.contact-title-accent {
+  color: #087BFF;
+}
+
+.contact-faq-subtitle {
+  font-size: 15px;
+  line-height: 1.65;
+  color: #5A6F85;
+  margin: 0;
+}
+
+/* FAQ List */
+.contact-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.faq-item-card {
+  background: #FFFFFF;
+  border: 1px solid rgba(8, 127, 255, 0.14);
+  border-radius: 16px;
+  padding: 20px 24px;
+  box-shadow: 0 4px 20px rgba(7, 26, 53, 0.03);
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.faq-item-card:hover {
+  border-color: rgba(8, 127, 255, 0.35);
+  box-shadow: 0 6px 24px rgba(8, 123, 255, 0.08);
+}
+
+.faq-item-card.is-open {
+  border-color: #087BFF;
+  background: #FFFFFF;
+  box-shadow: 0 8px 30px rgba(8, 123, 255, 0.1);
+}
+
+.faq-question-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.faq-question-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex: 1;
+}
+
+.faq-num {
+  font-size: 14px;
+  font-weight: 800;
+  color: #087BFF;
+  background: rgba(8, 123, 255, 0.08);
+  padding: 4px 10px;
+  border-radius: 8px;
+  letter-spacing: 0.5px;
+}
+
+.faq-question-text {
+  font-size: 16px;
+  font-weight: 750;
+  color: #07172C;
+  line-height: 1.35;
+  margin: 0;
+  letter-spacing: -0.2px;
+}
+
+.faq-toggle-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid rgba(8, 127, 255, 0.2);
+  background: rgba(8, 123, 255, 0.04);
+  color: #087BFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.faq-chevron {
+  transition: transform 0.25s ease;
+}
+
+.faq-chevron.rotated {
+  transform: rotate(180deg);
+}
+
+.faq-answer-content {
+  padding-top: 14px;
+  margin-top: 14px;
+  border-top: 1px solid rgba(8, 127, 255, 0.1);
+  animation: faqOpen 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes faqOpen {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.faq-answer-content p {
+  font-size: 14px;
+  line-height: 1.65;
+  color: #5A6F85;
+  margin: 0;
+}
+
+/* =========================================================
+   RESPONSIVE DESIGN
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .contact-faq-section {
+    padding: 60px 16px;
+  }
+
+  .contact-faq-title {
+    font-size: clamp(26px, 7.5vw, 34px);
+    letter-spacing: -0.5px;
+  }
+
+  .faq-item-card {
+    padding: 16px 18px;
+  }
+
+  .faq-question-text {
+    font-size: 14.5px;
+  }
+
+  .faq-num {
+    display: none;
+  }
+
+  .faq-answer-content p {
+    font-size: 13.5px;
+  }
+}

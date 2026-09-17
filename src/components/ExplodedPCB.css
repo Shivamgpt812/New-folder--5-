@@ -1,0 +1,70 @@
+.exploded-pcb-container {
+  position: relative;
+  width: 100%;
+  max-width: 590px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.exploded-pcb {
+  width: 100%;
+  max-width: 590px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 25px 35px rgba(25, 100, 170, 0.14));
+  animation: float-pcb 8s ease-in-out infinite;
+}
+
+@keyframes float-pcb {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .exploded-pcb {
+    animation: none;
+  }
+}
+
+@media (max-width: 1399px) and (min-width: 1200px) {
+  .exploded-pcb-container {
+    max-width: 520px;
+  }
+  
+  .exploded-pcb {
+    max-width: 520px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .exploded-pcb-container {
+    max-width: 460px;
+  }
+  
+  .exploded-pcb {
+    max-width: 460px;
+  }
+}
+
+@media (max-width: 768px) {
+  .exploded-pcb-container {
+    max-width: 100%;
+    margin: 10px auto 20px;
+  }
+  
+  .exploded-pcb {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .exploded-pcb {
+    max-width: 260px;
+  }
+}

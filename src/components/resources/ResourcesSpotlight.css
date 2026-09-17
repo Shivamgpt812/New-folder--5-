@@ -1,0 +1,269 @@
+/* ==========================================================================
+   ENGINEERING SPOTLIGHT SECTION - LIGHT BLUE HIGH-TECH HIGHLIGHT
+   ========================================================================== */
+
+.resources-spotlight-section {
+  position: relative;
+  background: #EFF6FF;
+  padding: 90px 48px;
+  overflow: hidden;
+  border-top: 1px solid rgba(8, 123, 255, 0.12);
+  border-bottom: 1px solid rgba(8, 123, 255, 0.12);
+}
+
+.spotlight-bg-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(to right, rgba(8, 123, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(8, 123, 255, 0.05) 1px, transparent 1px);
+  background-size: 32px 32px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.resources-spotlight-container {
+  max-width: 1550px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* Left Content */
+.spotlight-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.spotlight-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(8, 123, 255, 0.1);
+  border: 1px solid rgba(8, 123, 255, 0.25);
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+  width: fit-content;
+}
+
+.spotlight-badge-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #087BFF;
+  box-shadow: 0 0 8px #087BFF;
+}
+
+.spotlight-badge-text {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  color: #087BFF;
+}
+
+.spotlight-sub-tag {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: #64748B;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.spotlight-main-heading {
+  font-size: clamp(34px, 3.6vw, 48px);
+  font-weight: 850;
+  line-height: 1.12;
+  color: #051429;
+  letter-spacing: -1px;
+  margin: 0 0 16px 0;
+}
+
+.spotlight-accent {
+  color: #087BFF;
+}
+
+.spotlight-description {
+  font-size: 15.5px;
+  line-height: 1.7;
+  color: #334155;
+  margin: 0 0 28px 0;
+  max-width: 640px;
+}
+
+/* Specs Grid */
+.spotlight-specs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.spotlight-spec-card {
+  background: #FFFFFF;
+  border: 1px solid rgba(8, 123, 255, 0.18);
+  border-radius: 12px;
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  box-shadow: 0 2px 8px rgba(8, 123, 255, 0.04);
+}
+
+.spec-label {
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: #087BFF;
+}
+
+.spec-val {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #0F172A;
+}
+
+.spotlight-cta-row {
+  display: flex;
+}
+
+.spotlight-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #087BFF;
+  color: #FFFFFF;
+  padding: 15px 30px;
+  border-radius: 12px;
+  font-size: 13.5px;
+  font-weight: 750;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(8, 123, 255, 0.35);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.spotlight-cta-btn:hover {
+  background: #0066D6;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(8, 123, 255, 0.45);
+}
+
+/* Right Visual */
+.spotlight-right {
+  display: flex;
+  justify-content: center;
+}
+
+.spotlight-image-frame {
+  position: relative;
+  width: 100%;
+  max-width: 580px;
+  border-radius: 22px;
+  border: 1px solid rgba(8, 123, 255, 0.25);
+  box-shadow: 0 20px 50px rgba(8, 123, 255, 0.12);
+}
+
+.spotlight-img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  display: block;
+  border-radius: 21px;
+}
+
+.spotlight-img-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 21px;
+  background: linear-gradient(180deg, rgba(5, 20, 41, 0.02) 0%, rgba(5, 20, 41, 0.3) 100%);
+  pointer-events: none;
+}
+
+.spotlight-marker {
+  position: absolute;
+  background: rgba(11, 18, 32, 0.88);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(8, 123, 255, 0.4);
+  color: #38BDF8;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 0.06em;
+  padding: 8px 14px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 5;
+}
+
+.marker-top {
+  top: 24px;
+  right: -16px;
+}
+
+.marker-bottom {
+  bottom: 24px;
+  left: -16px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .resources-spotlight-section {
+    padding: 70px 32px;
+  }
+
+  .resources-spotlight-container {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .marker-top {
+    right: 12px;
+  }
+
+  .marker-bottom {
+    left: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .resources-spotlight-section {
+    padding: 55px 16px;
+  }
+
+  .spotlight-specs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .spotlight-img {
+    height: 280px;
+  }
+
+  .spotlight-cta-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .spotlight-marker {
+    position: static;
+    margin-top: 10px;
+  }
+
+  .spotlight-right {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

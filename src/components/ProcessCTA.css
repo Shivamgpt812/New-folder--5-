@@ -1,0 +1,72 @@
+.process-cta {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.process-cta:hover {
+  transform: translateX(4px);
+}
+
+.process-cta-play {
+  width: 56px;
+  height: 56px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1.5px solid rgba(8, 123, 255, 0.25);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #087BFF;
+  transition: all 0.3s ease;
+}
+
+.process-cta:hover .process-cta-play {
+  background: #087BFF;
+  color: white;
+  border-color: #087BFF;
+  transform: scale(1.05);
+}
+
+.process-cta-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.process-cta-watch {
+  font-size: 15px;
+  font-weight: 600;
+  color: #071B3A;
+  line-height: 1;
+}
+
+.process-cta-label {
+  font-size: 15px;
+  color: #6D7D95;
+  line-height: 1;
+}
+
+@media (max-width: 768px) {
+  .process-cta {
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .process-cta-play {
+    width: 52px;
+    height: 52px;
+  }
+  
+  .process-cta-play svg {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .process-cta-watch,
+  .process-cta-label {
+    font-size: 14px;
+  }
+}

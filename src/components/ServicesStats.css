@@ -1,0 +1,144 @@
+.services-stats {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  flex: 1;
+}
+
+.services-stat {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 16px;
+}
+
+.services-stats-separator {
+  width: 1px;
+  height: 40px;
+  background: rgba(100, 130, 180, 0.12);
+  flex-shrink: 0;
+}
+
+.services-stat-icon {
+  width: 40px;
+  height: 40px;
+  background: #EEF6FF;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #087BFF;
+  flex-shrink: 0;
+}
+
+.services-stat-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.services-stat-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.services-stat-number {
+  font-size: 18px;
+  font-weight: 700;
+  color: #087BFF;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.services-stat-label {
+  font-size: 11px;
+  color: #6B7C93;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+
+@media (max-width: 1199px) {
+  .services-stat {
+    padding: 0 24px;
+    gap: 14px;
+  }
+  
+  .services-stat-icon {
+    width: 52px;
+    height: 52px;
+  }
+  
+  .services-stat-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .services-stat-number {
+    font-size: 24px;
+  }
+  
+  .services-stat-label {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-stats {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px 14px;
+  }
+  
+  .services-stat {
+    width: 100%;
+    padding: 0;
+    gap: 10px;
+  }
+  
+  .services-stats-separator {
+    display: none;
+  }
+  
+  .services-stat-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+  }
+  
+  .services-stat-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .services-stat-number {
+    font-size: 20px;
+    white-space: normal;
+  }
+  
+  .services-stat-label {
+    font-size: 12px;
+    white-space: normal;
+    line-height: 1.25;
+  }
+}
+
+@media (max-width: 400px) {
+  .services-stat-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .services-stat-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .services-stat-number {
+    font-size: 18px;
+  }
+
+  .services-stat-label {
+    font-size: 11px;
+  }
+}

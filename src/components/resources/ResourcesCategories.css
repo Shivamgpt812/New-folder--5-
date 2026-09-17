@@ -1,0 +1,219 @@
+/* ==========================================================================
+   RESOURCE CATEGORIES SECTION - LARGE HORIZONTAL BLOCKS
+   ========================================================================== */
+
+.resources-categories-section {
+  position: relative;
+  background: #F4F7FB;
+  padding: 80px 48px;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(8, 123, 255, 0.08);
+}
+
+.resources-categories-container {
+  max-width: 1550px;
+  margin: 0 auto;
+}
+
+.categories-header {
+  margin-bottom: 40px;
+}
+
+.categories-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.categories-eyebrow-line {
+  width: 28px;
+  height: 2.5px;
+  background: #087BFF;
+  border-radius: 2px;
+}
+
+.categories-eyebrow-text {
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+  color: #087BFF;
+  text-transform: uppercase;
+}
+
+.categories-main-heading {
+  font-size: clamp(30px, 3.2vw, 42px);
+  font-weight: 850;
+  line-height: 1.15;
+  color: #051429;
+  letter-spacing: -0.8px;
+  margin: 0;
+}
+
+/* Horizontal Grid */
+.categories-horizontal-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.category-block-card {
+  position: relative;
+  background: #FFFFFF;
+  border: 1px solid rgba(8, 123, 255, 0.14);
+  border-radius: 20px;
+  padding: 28px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 18px rgba(11, 18, 32, 0.03);
+}
+
+.category-block-card:hover,
+.category-block-card.is-selected {
+  transform: translateY(-5px);
+  border-color: #087BFF;
+  box-shadow: 0 16px 36px rgba(8, 123, 255, 0.12);
+}
+
+.category-block-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.category-block-num {
+  font-size: 22px;
+  font-weight: 900;
+  color: #94A3B8;
+  font-family: monospace;
+  transition: color 0.25s ease;
+}
+
+.category-block-card:hover .category-block-num,
+.category-block-card.is-selected .category-block-num {
+  color: #087BFF;
+}
+
+.category-block-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(8, 123, 255, 0.08);
+  color: #087BFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+}
+
+.category-block-card:hover .category-block-icon,
+.category-block-card.is-selected .category-block-icon {
+  background: #087BFF;
+  color: #FFFFFF;
+  transform: scale(1.06);
+}
+
+.category-block-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.category-block-title {
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: #0F172A;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.category-block-desc {
+  font-size: 13px;
+  line-height: 1.55;
+  color: #64748B;
+  margin: 0;
+}
+
+.category-block-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 14px;
+  border-top: 1px solid rgba(8, 123, 255, 0.08);
+}
+
+.category-explore-text {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #087BFF;
+}
+
+.category-arrow-wrap {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(8, 123, 255, 0.08);
+  color: #087BFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+}
+
+.category-block-card:hover .category-arrow-wrap,
+.category-block-card.is-selected .category-arrow-wrap {
+  background: #087BFF;
+  color: #FFFFFF;
+  transform: translateX(4px);
+}
+
+.category-hover-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: #087BFF;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.category-block-card:hover .category-hover-line,
+.category-block-card.is-selected .category-hover-line {
+  transform: scaleX(1);
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .categories-horizontal-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  .resources-categories-section {
+    padding: 60px 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .resources-categories-section {
+    padding: 50px 16px;
+  }
+
+  .categories-horizontal-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .category-block-card {
+    padding: 22px 18px 18px;
+    border-radius: 16px;
+  }
+}

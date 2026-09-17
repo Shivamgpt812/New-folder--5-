@@ -1,0 +1,41 @@
+.services-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  height: 40px;
+  padding: 0 18px;
+  background: rgba(235, 245, 255, 0.75);
+  border: 1px solid rgba(40, 130, 255, 0.15);
+  border-radius: 999px;
+  margin-bottom: 20px;
+}
+
+.services-badge-line {
+  width: 24px;
+  height: 3px;
+  background: #087BFF;
+  border-radius: 999px;
+}
+
+.services-badge-text {
+  font-size: 14px;
+  font-weight: 600;
+  color: #087BFF;
+  letter-spacing: 0.3px;
+}
+
+@media (max-width: 768px) {
+  .services-badge {
+    height: 36px;
+    padding: 0 16px;
+  }
+  
+  .services-badge-line {
+    width: 20px;
+    height: 2.5px;
+  }
+  
+  .services-badge-text {
+    font-size: 13px;
+  }
+}

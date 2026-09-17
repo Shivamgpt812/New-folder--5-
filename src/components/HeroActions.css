@@ -1,0 +1,82 @@
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.action-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 54px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  border: none;
+}
+
+.action-button.primary {
+  width: 264px;
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-bright) 100%);
+  color: var(--text-white);
+  box-shadow: 0 4px 24px rgba(8, 123, 255, 0.4);
+}
+
+.action-button.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 32px rgba(8, 123, 255, 0.6);
+}
+
+.action-button.secondary {
+  width: 320px;
+  background: rgba(8, 29, 50, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--cyan);
+  color: var(--text-white);
+}
+
+.action-button.secondary svg {
+  color: var(--cyan);
+}
+
+.action-button.secondary:hover {
+  transform: translateY(-2px);
+  background: rgba(8, 29, 50, 0.6);
+  border-color: var(--primary-blue-bright);
+  box-shadow: 0 4px 20px rgba(53, 214, 255, 0.3);
+}
+
+@media (max-width: 768px) {
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+  
+  .action-button.primary,
+  .action-button.secondary {
+    width: 100%;
+    max-width: 100%;
+    height: 52px;
+    font-size: 13.5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .action-button {
+    height: 48px;
+    font-size: 13px;
+    padding: 0 14px;
+    border-radius: 10px;
+  }
+  
+  .action-button svg {
+    width: 16px;
+    height: 16px;
+  }
+}

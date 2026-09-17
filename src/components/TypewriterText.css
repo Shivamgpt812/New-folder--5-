@@ -1,0 +1,38 @@
+.typewriter-container {
+  display: inline-flex;
+  align-items: baseline;
+  position: relative;
+  min-height: 1em;
+  overflow: visible;
+  padding-bottom: 0.1em;
+  margin-bottom: -0.1em;
+}
+
+.typewriter-cursor {
+  display: inline-block;
+  width: 3px;
+  height: 0.85em;
+  background: linear-gradient(180deg, #24A8FF 0%, #00D8FF 100%);
+  margin-left: 3px;
+  border-radius: 2px;
+  vertical-align: baseline;
+  box-shadow: 0 0 10px rgba(36, 168, 255, 0.7);
+  animation: typewriterBlink 0.85s infinite ease-in-out;
+}
+
+@keyframes typewriterBlink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .typewriter-cursor {
+    width: 2.5px;
+    height: 0.82em;
+    margin-left: 2px;
+  }
+}

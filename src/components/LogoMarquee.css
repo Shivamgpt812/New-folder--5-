@@ -1,0 +1,116 @@
+/* Infinite Logo Marquee */
+.logo-marquee-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(0, 0, 0, 1) 12%,
+    rgba(0, 0, 0, 1) 88%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(0, 0, 0, 1) 12%,
+    rgba(0, 0, 0, 1) 88%,
+    transparent 100%
+  );
+}
+
+.logo-marquee-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: logoScroll 28s linear infinite;
+}
+
+.logo-marquee-wrapper:hover .logo-marquee-track {
+  animation-play-state: paused;
+}
+
+.logo-marquee-group {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  padding-right: 36px;
+  flex-shrink: 0;
+}
+
+.logo-marquee-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  padding: 0 18px;
+  background: rgba(10, 35, 60, 0.35);
+  border: 1px solid rgba(80, 160, 240, 0.14);
+  border-radius: 12px;
+  color: rgba(225, 238, 252, 0.65);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  flex-shrink: 0;
+}
+
+.logo-marquee-item:hover {
+  color: #FFFFFF;
+  background: rgba(15, 50, 85, 0.65);
+  border-color: rgba(53, 214, 255, 0.45);
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 
+    0 8px 24px rgba(8, 123, 255, 0.22),
+    0 0 15px rgba(53, 214, 255, 0.25);
+}
+
+.brand-vector-logo {
+  height: 22px;
+  width: auto;
+  max-width: 130px;
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+
+.logo-marquee-item:hover .brand-vector-logo {
+  filter: drop-shadow(0 0 8px rgba(53, 214, 255, 0.5));
+}
+
+@keyframes logoScroll {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@media (max-width: 768px) {
+  .logo-marquee-group {
+    gap: 20px;
+    padding-right: 20px;
+  }
+
+  .logo-marquee-item {
+    height: 42px;
+    padding: 0 14px;
+    border-radius: 10px;
+  }
+
+  .brand-vector-logo {
+    height: 18px;
+    max-width: 105px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logo-marquee-track {
+    animation: none;
+  }
+  .logo-marquee-wrapper {
+    overflow-x: auto;
+  }
+}

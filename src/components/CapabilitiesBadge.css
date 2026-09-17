@@ -1,0 +1,32 @@
+.capabilities-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  height: 40px;
+  padding: 0 18px;
+  background: rgba(240, 247, 255, 0.8);
+  border: 1px solid rgba(8, 123, 255, 0.15);
+  border-radius: 999px;
+  margin-bottom: 28px;
+}
+
+.capabilities-badge__line {
+  width: 24px;
+  height: 3px;
+  background: #087BFF;
+  border-radius: 2px;
+}
+
+.capabilities-badge__text {
+  font-size: 14px;
+  font-weight: 600;
+  color: #087BFF;
+  letter-spacing: 0.5px;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .capabilities-badge {
+    margin-bottom: 24px;
+  }
+}

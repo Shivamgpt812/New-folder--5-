@@ -1,0 +1,241 @@
+.industry-stats-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(2, 18, 35, 0.72);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(80, 160, 230, 0.20);
+  height: 115px;
+  display: flex;
+  align-items: center;
+}
+
+.industry-stats-bar__container {
+  max-width: 1640px;
+  margin: 0 auto;
+  padding: 0 70px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.industry-stats-bar__stats {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.industry-stats-bar__stat {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.industry-stats-bar__icon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(20, 154, 255, 0.12);
+  border: 1px solid rgba(20, 154, 255, 0.3);
+  border-radius: 50%;
+  color: #159AFF;
+}
+
+.industry-stats-bar__content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.industry-stats-bar__value {
+  font-size: 28px;
+  font-weight: 700;
+  color: #159AFF;
+  line-height: 1;
+}
+
+.industry-stats-bar__label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #A8BCD0;
+  line-height: 1.2;
+}
+
+.industry-stats-bar__separator {
+  width: 1px;
+  height: 50px;
+  background: rgba(80, 160, 230, 0.18);
+}
+
+.industry-stats-bar__message {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.industry-stats-bar__message-line {
+  width: 32px;
+  height: 2px;
+  background: #159AFF;
+  border-radius: 2px;
+}
+
+.industry-stats-bar__message-text {
+  font-size: 12px;
+  font-weight: 600;
+  color: #9DB1C5;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  line-height: 1.4;
+}
+
+/* Large Desktop */
+@media (max-width: 1399px) {
+  .industry-stats-bar__container {
+    padding: 0 50px;
+  }
+
+  .industry-stats-bar__stats {
+    gap: 40px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 1199px) {
+  .industry-stats-bar {
+    height: auto;
+    min-height: 115px;
+  }
+
+  .industry-stats-bar__container {
+    padding: 20px 32px;
+  }
+
+  .industry-stats-bar__stats {
+    gap: 30px;
+  }
+
+  .industry-stats-bar__value {
+    font-size: 24px;
+  }
+
+  .industry-stats-bar__label {
+    font-size: 13px;
+  }
+}
+
+/* Mobile & Small Tablet */
+@media (max-width: 991px) {
+  .industry-stats-bar {
+    position: relative !important;
+    bottom: auto !important;
+    left: auto !important;
+    right: auto !important;
+    z-index: 10 !important;
+    height: auto;
+    background: rgba(3, 16, 30, 0.95);
+    border-top: 1px solid rgba(80, 160, 230, 0.25);
+  }
+
+  .industry-stats-bar__container {
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px 18px;
+  }
+
+  .industry-stats-bar__stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    width: 100%;
+  }
+
+  .industry-stats-bar__stat {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(6, 26, 48, 0.55);
+    border: 1px solid rgba(30, 145, 255, 0.2);
+    border-radius: 12px;
+    padding: 12px 14px;
+    box-sizing: border-box;
+  }
+
+  .industry-stats-bar__icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background: rgba(8, 123, 255, 0.16);
+    border: 1px solid rgba(30, 145, 255, 0.35);
+    color: #2FB2FF;
+    flex-shrink: 0;
+  }
+
+  .industry-stats-bar__icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .industry-stats-bar__value {
+    font-size: 22px;
+    font-weight: 750;
+    color: #2FB2FF;
+  }
+
+  .industry-stats-bar__label {
+    font-size: 11.5px;
+    color: #B5CCE2;
+    font-weight: 500;
+  }
+
+  .industry-stats-bar__separator {
+    display: none;
+  }
+
+  .industry-stats-bar__message {
+    padding-top: 12px;
+    border-top: 1px solid rgba(80, 160, 230, 0.15);
+    width: 100%;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .industry-stats-bar__message-line {
+    width: 24px;
+    height: 2px;
+  }
+
+  .industry-stats-bar__message-text {
+    font-size: 11px;
+    letter-spacing: 0.6px;
+    color: #8BA8C4;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .industry-stats-bar__container {
+    padding: 20px 14px;
+  }
+
+  .industry-stats-bar__stats {
+    gap: 10px;
+  }
+
+  .industry-stats-bar__stat {
+    padding: 10px 12px;
+    gap: 10px;
+  }
+
+  .industry-stats-bar__value {
+    font-size: 20px;
+  }
+
+  .industry-stats-bar__label {
+    font-size: 11px;
+  }
+}

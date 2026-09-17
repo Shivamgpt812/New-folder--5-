@@ -1,0 +1,144 @@
+.technical-capabilities-panel {
+  width: 100%;
+  max-width: 450px;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(80, 140, 200, 0.16);
+  border-radius: 18px;
+  box-shadow: 0 12px 35px rgba(50, 100, 160, 0.08);
+  padding: 24px;
+}
+
+.technical-capabilities-panel__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.technical-capabilities-panel__title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #071B3A;
+  margin: 0;
+}
+
+.technical-capabilities-panel__link {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #087BFF;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.technical-capabilities-panel__link:hover {
+  color: #2196FF;
+}
+
+.technical-capabilities-panel__link-icon {
+  width: 14px;
+  height: 14px;
+}
+
+.technical-capabilities-panel__table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.technical-capabilities-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.technical-capabilities-table thead {
+  background: #F1F7FE;
+  border-radius: 8px;
+}
+
+.technical-capabilities-table th {
+  padding: 10px 12px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #071B3A;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.technical-capabilities-table th:first-child {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.technical-capabilities-table th:last-child {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  text-align: center;
+}
+
+.technical-capabilities-table tbody tr {
+  border-bottom: 1px solid rgba(100, 140, 180, 0.12);
+  transition: background-color 0.2s ease;
+}
+
+.technical-capabilities-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.technical-capabilities-table tbody tr:hover {
+  background: rgba(240, 247, 255, 0.4);
+}
+
+.technical-capabilities-table td {
+  padding: 9px 12px;
+  font-size: 13px;
+  color: #526680;
+}
+
+.technical-capabilities-table td:last-child {
+  text-align: center;
+}
+
+.technical-capabilities-table__check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  color: #087BFF;
+}
+
+/* Tablet */
+@media (max-width: 1199px) {
+  .technical-capabilities-panel {
+    max-width: 100%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .technical-capabilities-panel {
+    padding: 20px;
+  }
+
+  .technical-capabilities-panel__title {
+    font-size: 14px;
+  }
+
+  .technical-capabilities-panel__link {
+    font-size: 12px;
+  }
+
+  .technical-capabilities-table th {
+    font-size: 11px;
+    padding: 8px 10px;
+  }
+
+  .technical-capabilities-table td {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+}

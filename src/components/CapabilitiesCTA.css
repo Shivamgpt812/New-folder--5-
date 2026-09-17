@@ -1,0 +1,52 @@
+.capabilities-cta {
+  display: inline-block;
+  width: 290px;
+}
+
+.capabilities-cta__button {
+  width: 100%;
+  height: 58px;
+  background: #087BFF;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(8, 123, 255, 0.20);
+  transition: all 0.3s ease;
+}
+
+.capabilities-cta__button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(8, 123, 255, 0.25);
+  background: #0988FF;
+}
+
+.capabilities-cta__button:active {
+  transform: translateY(0);
+}
+
+.capabilities-cta__icon {
+  width: 18px;
+  height: 18px;
+}
+
+/* Small Tablet */
+@media (max-width: 991px) {
+  .capabilities-cta {
+    width: 100%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .capabilities-cta__button {
+    height: 54px;
+    font-size: 15px;
+  }
+}

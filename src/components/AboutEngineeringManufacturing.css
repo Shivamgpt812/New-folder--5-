@@ -1,0 +1,301 @@
+/* ==========================================================================
+   ENGINEERING + MANUFACTURING SECTION - MODERN ATRONICS LIGHT THEME
+   ========================================================================== */
+
+.about-mfg-section {
+  position: relative;
+  background: #F4F7FB;
+  padding: 100px 48px;
+  overflow: hidden;
+  border-top: 1px solid rgba(8, 123, 255, 0.08);
+}
+
+.mfg-bg-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(circle, rgba(8, 123, 255, 0.06) 1px, transparent 1px);
+  background-size: 28px 28px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.mfg-container {
+  max-width: 1550px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* Left Content */
+.mfg-left-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.mfg-section-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.mfg-badge-line {
+  width: 28px;
+  height: 2.5px;
+  background: #087BFF;
+  border-radius: 2px;
+}
+
+.mfg-badge-text {
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+  color: #087BFF;
+  text-transform: uppercase;
+}
+
+.mfg-main-heading {
+  font-size: clamp(34px, 3.6vw, 48px);
+  font-weight: 850;
+  line-height: 1.12;
+  color: #051429;
+  letter-spacing: -1px;
+  margin: 0 0 10px 0;
+}
+
+.mfg-heading-accent {
+  color: #087BFF;
+}
+
+.mfg-handwritten-note {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.mfg-handwritten-note span {
+  font-family: 'Caveat', cursive;
+  font-size: 22px;
+  font-weight: 700;
+  color: #087BFF;
+  transform: rotate(-1.5deg);
+}
+
+.mfg-handwritten-note svg {
+  margin-top: -3px;
+}
+
+.mfg-lead-text {
+  font-size: 15.5px;
+  line-height: 1.7;
+  color: #475569;
+  margin: 0 0 28px 0;
+  max-width: 680px;
+}
+
+/* 4 Feature Cards Grid */
+.mfg-features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.mfg-feature-card {
+  background: #FFFFFF;
+  border: 1px solid rgba(8, 123, 255, 0.12);
+  border-radius: 14px;
+  padding: 18px 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 16px rgba(11, 18, 32, 0.02);
+}
+
+.mfg-feature-card:hover {
+  background: #FFFFFF;
+  border-color: rgba(8, 123, 255, 0.35);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(8, 123, 255, 0.08);
+}
+
+.mfg-icon-box {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: rgba(8, 123, 255, 0.1);
+  color: #087BFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.25s ease;
+}
+
+.mfg-feature-card:hover .mfg-icon-box {
+  background: #087BFF;
+  color: #FFFFFF;
+  transform: scale(1.05);
+}
+
+.mfg-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.mfg-title {
+  font-size: 14.5px;
+  font-weight: 750;
+  color: #0F172A;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.mfg-desc {
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: #64748B;
+  margin: 0;
+}
+
+/* Right Visual Frame */
+.mfg-right-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.mfg-image-frame {
+  position: relative;
+  border-radius: 24px;
+  overflow: visible;
+  width: 100%;
+  max-width: 580px;
+  border: 1px solid rgba(8, 123, 255, 0.18);
+  box-shadow: 0 24px 60px rgba(11, 18, 32, 0.12), 0 0 40px rgba(8, 123, 255, 0.06);
+}
+
+.mfg-main-img {
+  width: 100%;
+  height: 460px;
+  object-fit: cover;
+  display: block;
+  border-radius: 23px;
+}
+
+.mfg-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 23px;
+  background: linear-gradient(180deg, rgba(5, 20, 41, 0.02) 0%, rgba(5, 20, 41, 0.35) 100%);
+  pointer-events: none;
+}
+
+/* Floating Quality Badges */
+.mfg-float-badge {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(8, 123, 255, 0.25);
+  box-shadow: 0 16px 36px rgba(5, 20, 41, 0.12);
+  border-radius: 14px;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 5;
+  animation: floatBounce 4.2s ease-in-out infinite;
+}
+
+.mfg-badge-top {
+  top: 24px;
+  right: -20px;
+}
+
+.mfg-badge-bottom {
+  bottom: 24px;
+  left: -20px;
+  animation-delay: 2.1s;
+}
+
+.mfg-float-icon-wrap {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: rgba(16, 185, 129, 0.12);
+  color: #10B981;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.mfg-float-icon-wrap.blue {
+  background: rgba(8, 123, 255, 0.12);
+  color: #087BFF;
+}
+
+.mfg-float-text {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .about-mfg-section {
+    padding: 70px 32px;
+  }
+
+  .mfg-container {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .mfg-badge-top {
+    right: 12px;
+  }
+
+  .mfg-badge-bottom {
+    left: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-mfg-section {
+    padding: 55px 16px 40px;
+  }
+
+  .mfg-features-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .mfg-main-img {
+    height: 320px;
+  }
+
+  .mfg-badge-top,
+  .mfg-badge-bottom {
+    position: static;
+    margin-top: 10px;
+  }
+
+  .mfg-right-visual {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}

@@ -1,0 +1,8 @@
+.contact-page {
+  background: #FFFFFF;
+  min-height: 100vh;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+  box-sizing: border-box;
+}

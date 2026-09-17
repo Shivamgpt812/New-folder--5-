@@ -1,0 +1,99 @@
+.manufacturing-intro {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.manufacturing-intro__heading {
+  font-size: 68px;
+  font-weight: 780;
+  line-height: 1.02;
+  letter-spacing: -2.5px;
+  margin: 0;
+  max-width: 620px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.manufacturing-intro__heading-line1,
+.manufacturing-intro__heading-line2 {
+  color: #FFFFFF;
+}
+
+.manufacturing-intro__heading-highlight {
+  color: #159AFF;
+}
+
+.manufacturing-intro__description {
+  font-size: 17.5px;
+  line-height: 1.6;
+  color: #B7C9DC;
+  margin: 0;
+  max-width: 640px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1399px) {
+  .manufacturing-intro__heading {
+    font-size: 60px;
+    letter-spacing: -2px;
+  }
+  
+  .manufacturing-intro__description {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .manufacturing-intro__heading {
+    font-size: 56px;
+    letter-spacing: -1.8px;
+  }
+  
+  .manufacturing-intro__description {
+    font-size: 16.5px;
+  }
+}
+
+@media (max-width: 991px) {
+  .manufacturing-intro__heading {
+    font-size: 52px;
+    max-width: 100%;
+  }
+  
+  .manufacturing-intro__description {
+    font-size: 16px;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .manufacturing-intro {
+    gap: 14px;
+  }
+  
+  .manufacturing-intro__heading {
+    font-size: clamp(32px, 8.5vw, 42px);
+    letter-spacing: -1px;
+    line-height: 1.12;
+  }
+  
+  .manufacturing-intro__description {
+    font-size: 14px;
+    line-height: 1.55;
+    color: #9DB5CB;
+  }
+}
+
+@media (max-width: 480px) {
+  .manufacturing-intro__heading {
+    font-size: clamp(28px, 8vw, 34px);
+    letter-spacing: -0.8px;
+  }
+  
+  .manufacturing-intro__description {
+    font-size: 13.5px;
+  }
+}

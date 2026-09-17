@@ -1,0 +1,148 @@
+/* ==========================================================================
+   RESOURCES FINAL CTA SECTION - LIGHT / BLUE SUBTLE PATTERN
+   ========================================================================== */
+
+.resources-final-cta-section {
+  position: relative;
+  background: #F4F7FB;
+  padding: 100px 48px;
+  overflow: hidden;
+  border-top: 1px solid rgba(8, 123, 255, 0.08);
+}
+
+.final-cta-circuit-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(circle, rgba(8, 123, 255, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.resources-final-cta-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.final-cta-card {
+  background: linear-gradient(135deg, #071A35 0%, #0A2645 100%);
+  border: 1px solid rgba(8, 123, 255, 0.3);
+  border-radius: 28px;
+  padding: 64px 48px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 24px 60px rgba(5, 20, 41, 0.25), 0 0 40px rgba(8, 123, 255, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.final-cta-card::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(8, 123, 255, 0.3) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.final-cta-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(8, 123, 255, 0.2);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  color: #38BDF8;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  padding: 5px 14px;
+  border-radius: 20px;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+}
+
+.final-cta-heading {
+  font-size: clamp(36px, 4vw, 52px);
+  font-weight: 850;
+  line-height: 1.12;
+  color: #FFFFFF;
+  letter-spacing: -1px;
+  margin: 0 0 16px 0;
+}
+
+.final-cta-subheading {
+  font-size: 16.5px;
+  line-height: 1.65;
+  color: #CBD5E1;
+  max-width: 680px;
+  margin: 0 0 32px 0;
+}
+
+.final-cta-actions {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.final-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #087BFF;
+  color: #FFFFFF;
+  border: none;
+  padding: 16px 36px;
+  border-radius: 14px;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(8, 123, 255, 0.4);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.final-cta-btn:hover {
+  background: #1C88FF;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(8, 123, 255, 0.55);
+}
+
+.final-cta-trust {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  color: #94A3B8;
+  font-weight: 500;
+}
+
+.final-cta-trust svg {
+  color: #38BDF8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .resources-final-cta-section {
+    padding: 60px 16px;
+  }
+
+  .final-cta-card {
+    padding: 40px 20px;
+    border-radius: 20px;
+  }
+
+  .final-cta-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

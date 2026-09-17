@@ -1,0 +1,264 @@
+/* ==========================================================================
+   OUR APPROACH / METHODOLOGY SECTION - MODERN ATRONICS LIGHT THEME
+   ========================================================================== */
+
+.about-approach-section {
+  position: relative;
+  background: #FFFFFF;
+  padding: 100px 48px;
+  overflow: hidden;
+  border-top: 1px solid rgba(8, 123, 255, 0.08);
+}
+
+.approach-bg-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(circle, rgba(8, 123, 255, 0.05) 1px, transparent 1px);
+  background-size: 28px 28px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.approach-container {
+  max-width: 1550px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Header */
+.approach-header {
+  text-align: center;
+  max-width: 840px;
+  margin: 0 auto 56px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.approach-section-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.approach-badge-line {
+  width: 28px;
+  height: 2.5px;
+  background: #087BFF;
+  border-radius: 2px;
+}
+
+.approach-badge-text {
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+  color: #087BFF;
+  text-transform: uppercase;
+}
+
+.approach-main-heading {
+  font-size: clamp(34px, 3.8vw, 50px);
+  font-weight: 850;
+  line-height: 1.12;
+  color: #051429;
+  letter-spacing: -1px;
+  margin: 0 0 10px 0;
+}
+
+.approach-heading-accent {
+  color: #087BFF;
+}
+
+.approach-handwritten-note {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.approach-handwritten-note span {
+  font-family: 'Caveat', cursive;
+  font-size: 22px;
+  font-weight: 700;
+  color: #087BFF;
+  transform: rotate(-1.5deg);
+}
+
+.approach-handwritten-note svg {
+  margin-top: -3px;
+}
+
+.approach-header-desc {
+  font-size: 15.5px;
+  line-height: 1.7;
+  color: #475569;
+  margin: 0;
+  max-width: 720px;
+}
+
+/* 5 Step Process Ribbon */
+.approach-steps-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
+}
+
+.approach-step-card {
+  position: relative;
+  background: #F8FAFC;
+  border: 1px solid rgba(8, 123, 255, 0.14);
+  border-radius: 18px;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 20px rgba(11, 18, 32, 0.03);
+}
+
+.approach-step-card:hover {
+  background: #FFFFFF;
+  transform: translateY(-5px);
+  border-color: #087BFF;
+  box-shadow: 0 16px 36px rgba(8, 123, 255, 0.12);
+}
+
+.step-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.step-number {
+  font-size: 20px;
+  font-weight: 900;
+  color: #087BFF;
+  font-family: monospace;
+}
+
+.step-phase-tag {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #64748B;
+  background: rgba(100, 116, 139, 0.1);
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+
+.step-icon-wrap {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  background: rgba(8, 123, 255, 0.09);
+  color: #087BFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+}
+
+.approach-step-card:hover .step-icon-wrap {
+  background: #087BFF;
+  color: #FFFFFF;
+  transform: scale(1.06);
+}
+
+.step-card-title {
+  font-size: 16px;
+  font-weight: 800;
+  color: #0F172A;
+  margin: 0;
+  line-height: 1.25;
+}
+
+.step-card-desc {
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: #64748B;
+  margin: 0;
+  flex: 1;
+}
+
+.step-deliverable-box {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(8, 123, 255, 0.06);
+  border: 1px solid rgba(8, 123, 255, 0.15);
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #0F172A;
+}
+
+.deliverable-check {
+  color: #10B981;
+  flex-shrink: 0;
+}
+
+.step-connector-arrow {
+  position: absolute;
+  right: -14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 1px solid rgba(8, 123, 255, 0.25);
+  box-shadow: 0 4px 10px rgba(8, 123, 255, 0.1);
+  color: #087BFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+
+/* Responsive */
+@media (max-width: 1280px) {
+  .approach-steps-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .step-connector-arrow {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .about-approach-section {
+    padding: 70px 32px;
+  }
+
+  .approach-steps-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-approach-section {
+    padding: 55px 16px 40px;
+  }
+
+  .approach-header {
+    margin-bottom: 36px;
+  }
+
+  .approach-steps-container {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .approach-step-card {
+    padding: 20px 18px;
+    border-radius: 16px;
+  }
+}

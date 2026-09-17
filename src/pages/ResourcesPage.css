@@ -1,0 +1,8 @@
+/* Resources Page Layout */
+.resources-page {
+  background-color: #FFFFFF;
+  min-height: 100vh;
+  color: #0F172A;
+  overflow-x: hidden;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}

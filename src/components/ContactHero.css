@@ -1,0 +1,442 @@
+/* =========================================================
+   ATRONICS CONTACT HERO SECTION - LIGHT THEME (EXACT MATCH)
+   ========================================================= */
+
+.contact-hero {
+  position: relative;
+  background: #F4F7FB;
+  min-height: 90vh;
+  padding: 120px 48px 60px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* Background blueprint dot pattern */
+.contact-hero-bg-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(circle at 1.5px 1.5px, rgba(8, 123, 255, 0.08) 1px, transparent 1px);
+  background-size: 32px 32px;
+  opacity: 0.7;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.contact-hero-layout-wrapper {
+  max-width: 1560px;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.contact-hero-container {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+  gap: 52px;
+  align-items: center;
+}
+
+/* =========================================================
+   LEFT CONTENT COLUMN
+   ========================================================= */
+
+.contact-hero-left {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Badge */
+.contact-hero-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.contact-badge-bar {
+  width: 32px;
+  height: 2.5px;
+  background: #087BFF;
+  border-radius: 2px;
+}
+
+.contact-badge-text {
+  font-size: 11.5px;
+  font-weight: 750;
+  letter-spacing: 1.6px;
+  color: #087BFF;
+  text-transform: uppercase;
+}
+
+/* Headline & Handwritten Container */
+.contact-headline-wrap {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 18px;
+}
+
+.contact-hero-headline {
+  font-size: 64px;
+  font-weight: 850;
+  line-height: 1.06;
+  color: #051429;
+  letter-spacing: -1.4px;
+  margin: 0;
+  font-family: inherit;
+}
+
+.contact-headline-accent {
+  color: #087BFF;
+}
+
+/* Handwritten Note Accent */
+.contact-handwritten-badge {
+  position: absolute;
+  top: 6px;
+  left: calc(100% - 130px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: rotate(6deg);
+  z-index: 5;
+  pointer-events: none;
+}
+
+.contact-handwritten-text {
+  font-family: 'Caveat', cursive, sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #087BFF;
+  line-height: 1.1;
+  text-align: center;
+  text-shadow: 0 1px 4px rgba(255, 255, 255, 0.95);
+}
+
+.contact-handwritten-underline {
+  margin-top: -2px;
+}
+
+/* Subtitle Description */
+.contact-hero-description {
+  font-size: 15.5px;
+  line-height: 1.65;
+  color: #4E6378;
+  margin: 0 0 32px 0;
+  max-width: 520px;
+}
+
+/* Feature Pills (3 Cards) */
+.contact-feature-pills {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.contact-feature-pill {
+  background: #FFFFFF;
+  border: 1px solid rgba(8, 123, 255, 0.14);
+  border-radius: 14px;
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  box-shadow: 0 4px 16px rgba(7, 26, 53, 0.04);
+  transition: all 0.25s ease;
+  flex: 1;
+  min-width: 140px;
+  box-sizing: border-box;
+}
+
+.contact-feature-pill:hover {
+  transform: translateY(-2px);
+  border-color: rgba(8, 123, 255, 0.35);
+  box-shadow: 0 6px 22px rgba(8, 123, 255, 0.1);
+}
+
+.contact-feature-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: rgba(8, 123, 255, 0.08);
+  color: #087BFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-feature-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.contact-feature-title {
+  font-size: 13.5px;
+  font-weight: 750;
+  color: #07172C;
+  line-height: 1.2;
+}
+
+.contact-feature-subtitle {
+  font-size: 11px;
+  color: #6E8195;
+  line-height: 1.25;
+}
+
+/* =========================================================
+   RIGHT VISUAL COLUMN
+   ========================================================= */
+
+.contact-hero-right {
+  position: relative;
+  width: 100%;
+}
+
+.contact-main-image-card {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(8, 123, 255, 0.14);
+  box-shadow: 0 20px 50px rgba(6, 22, 45, 0.1);
+  background: #EAF0F6;
+}
+
+.contact-main-image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10.5;
+  object-fit: cover;
+  display: block;
+}
+
+/* Floating Glassmorphic Pill Card */
+.contact-floating-card {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 16px;
+  padding: 12px 18px;
+  border: 1px solid rgba(8, 123, 255, 0.18);
+  box-shadow: 0 12px 36px rgba(7, 26, 53, 0.16);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+  z-index: 6;
+  transition: all 0.25s ease;
+}
+
+.contact-floating-card:hover {
+  transform: translateY(-2px);
+  border-color: #087BFF;
+  box-shadow: 0 16px 42px rgba(8, 123, 255, 0.22);
+}
+
+.contact-floating-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 11px;
+  background: rgba(8, 123, 255, 0.1);
+  color: #087BFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-floating-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.contact-floating-label {
+  font-size: 11.5px;
+  color: #6C8196;
+  line-height: 1.2;
+}
+
+.contact-floating-title {
+  font-size: 14px;
+  font-weight: 800;
+  color: #07172C;
+  line-height: 1.25;
+}
+
+.contact-floating-arrow-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(8, 123, 255, 0.3);
+  background: #FFFFFF;
+  color: #087BFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.contact-floating-card:hover .contact-floating-arrow-btn {
+  background: #087BFF;
+  color: #FFFFFF;
+  border-color: #087BFF;
+  transform: translateX(3px);
+}
+
+/* =========================================================
+   RESPONSIVE DESIGN
+   ========================================================= */
+
+@media (max-width: 1400px) {
+  .contact-hero {
+    padding: 110px 32px 50px;
+  }
+
+  .contact-hero-container {
+    gap: 36px;
+  }
+
+  .contact-hero-headline {
+    font-size: 52px;
+  }
+
+  .contact-handwritten-badge {
+    left: calc(100% - 100px);
+    top: 0px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .contact-hero {
+    padding: 100px 24px 45px;
+  }
+
+  .contact-hero-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .contact-hero-headline {
+    font-size: 44px;
+  }
+
+  .contact-feature-pills {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .contact-feature-pill {
+    min-width: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .contact-hero-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .contact-hero-left {
+    display: contents;
+  }
+
+  .contact-hero-badge {
+    order: 1;
+    margin-bottom: 12px;
+  }
+
+  .contact-headline-wrap {
+    order: 2;
+    margin-bottom: 14px;
+    width: 100%;
+  }
+
+  .contact-hero-headline {
+    font-size: clamp(32px, 7vw, 42px);
+    line-height: 1.12;
+  }
+
+  .contact-handwritten-badge {
+    display: none !important;
+  }
+
+  /* IMAGE COMES RIGHT AFTER HEADLINE ON MOBILE */
+  .contact-hero-right {
+    order: 3;
+    margin-bottom: 20px;
+  }
+
+  .contact-hero-description {
+    order: 4;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  .contact-feature-pills {
+    order: 5;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .contact-feature-pill {
+    width: 100%;
+    padding: 12px 14px;
+  }
+}
+
+@media (max-width: 640px) {
+  .contact-hero {
+    padding: 85px 16px 36px;
+  }
+
+  .contact-hero-headline {
+    font-size: clamp(28px, 8.5vw, 36px);
+    letter-spacing: -0.5px;
+  }
+
+  .contact-main-image-card {
+    border-radius: 18px;
+  }
+
+  .contact-floating-card {
+    bottom: 12px;
+    right: 12px;
+    padding: 10px 14px;
+    border-radius: 12px;
+    gap: 10px;
+  }
+
+  .contact-floating-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .contact-floating-title {
+    font-size: 12.5px;
+  }
+
+  .contact-floating-label {
+    font-size: 10.5px;
+  }
+
+  .contact-floating-arrow-btn {
+    width: 28px;
+    height: 28px;
+  }
+}

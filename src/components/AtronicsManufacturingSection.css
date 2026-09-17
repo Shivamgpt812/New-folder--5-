@@ -1,0 +1,124 @@
+.manufacturing-section {
+  position: relative;
+  background: linear-gradient(135deg, #031426 0%, #061D34 100%);
+  padding: 85px 0 0 0;
+  overflow: hidden;
+}
+
+.manufacturing-section__container {
+  max-width: 1640px;
+  margin: 0 auto;
+  padding: 0 70px;
+}
+
+.manufacturing-main {
+  display: grid;
+  grid-template-columns: 0.75fr 1.25fr;
+  gap: 60px;
+  min-height: 650px;
+  align-items: center;
+  position: relative;
+}
+
+.manufacturing-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  max-width: 640px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1399px) {
+  .manufacturing-section__container {
+    padding: 0 50px;
+  }
+  
+  .manufacturing-main {
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 50px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .manufacturing-section__container {
+    padding: 0 40px;
+  }
+  
+  .manufacturing-main {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    min-height: 580px;
+  }
+}
+
+@media (max-width: 991px) {
+  .manufacturing-section {
+    padding: 70px 0 0 0;
+  }
+  
+  .manufacturing-main {
+    grid-template-columns: 1fr;
+    gap: 50px;
+    min-height: auto;
+  }
+  
+  .manufacturing-content {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .manufacturing-section {
+    padding: 44px 0 0 0;
+  }
+  
+  .manufacturing-section__container {
+    padding: 0 16px;
+  }
+  
+  .manufacturing-main {
+    gap: 24px;
+  }
+  
+  .manufacturing-content {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .manufacturing-section {
+    padding: 36px 0 0 0;
+  }
+
+  .manufacturing-section__container {
+    padding: 0 14px;
+  }
+
+  .manufacturing-content {
+    gap: 14px;
+  }
+}
+
+/* ANIMATIONS */
+@media (prefers-reduced-motion: no-preference) {
+  .manufacturing-content > * {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUpManufacturing 0.8s ease-out forwards;
+  }
+  
+  .manufacturing-content > *:nth-child(1) { animation-delay: 0.1s; }
+  .manufacturing-content > *:nth-child(2) { animation-delay: 0.2s; }
+  .manufacturing-content > *:nth-child(3) { animation-delay: 0.3s; }
+  .manufacturing-content > *:nth-child(4) { animation-delay: 0.4s; }
+}
+
+@keyframes fadeUpManufacturing {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

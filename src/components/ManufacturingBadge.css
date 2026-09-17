@@ -1,0 +1,46 @@
+.manufacturing-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  height: 40px;
+  padding: 0 18px;
+  background: rgba(4, 27, 49, 0.72);
+  border: 1px solid rgba(30, 145, 255, 0.28);
+  border-radius: 999px;
+  backdrop-filter: blur(8px);
+  width: fit-content;
+}
+
+.manufacturing-badge__line {
+  width: 24px;
+  height: 3px;
+  background: #29A8FF;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.manufacturing-badge__text {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  color: #29A8FF;
+  text-transform: uppercase;
+}
+
+@media (max-width: 767px) {
+  .manufacturing-badge {
+    height: 36px;
+    padding: 0 16px;
+    gap: 10px;
+  }
+  
+  .manufacturing-badge__line {
+    width: 20px;
+    height: 2.5px;
+  }
+  
+  .manufacturing-badge__text {
+    font-size: 12px;
+    letter-spacing: 0.3px;
+  }
+}
