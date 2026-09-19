@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { useLocation } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import { 
   X, 
   User, 
@@ -26,7 +26,14 @@ import './AuthModal.css'
 const AuthModal = () => {
   const { isLoginOpen, closeLogin, initialRole, currentUser, login, logout, isAuthenticated } = useAuth()
   const location = useLocation()
-  const isLightMode = location.pathname === '/about' || location.pathname === '/contact' || location.pathname.startsWith('/resources')
+  const navigate = useNavigate()
+  const isLightMode = location.pathname === '/about' || 
+                      location.pathname === '/contact' || 
+                      location.pathname.startsWith('/resources') ||
+                      location.pathname.startsWith('/services') ||
+                      location.pathname.startsWith('/industries') ||
+                      location.pathname === '/portal' ||
+                      location.pathname === '/admin'
   
   const [activeTab, setActiveTab] = useState('user') // 'user', 'admin', 'register'
   const [showPassword, setShowPassword] = useState(false)
@@ -112,8 +119,12 @@ const AuthModal = () => {
         accountType: 'Enterprise Client'
       }
       login(userData)
-      setSuccessMessage('Client authentication successful!')
-    }, 800)
+      setSuccessMessage('Client authentication successful! Loading portal...')
+      setTimeout(() => {
+        closeLogin()
+        navigate('/portal')
+      }, 500)
+    }, 700)
   }
 
   const handleAdminLogin = (e) => {
@@ -142,8 +153,12 @@ const AuthModal = () => {
         accountType: 'System Administrator'
       }
       login(adminData)
-      setSuccessMessage('Admin security clearance verified!')
-    }, 900)
+      setSuccessMessage('Admin security clearance verified! Loading ERP...')
+      setTimeout(() => {
+        closeLogin()
+        navigate('/admin')
+      }, 500)
+    }, 700)
   }
 
   const handleRegisterSubmit = (e) => {

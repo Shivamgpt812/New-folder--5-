@@ -12,8 +12,8 @@ const CapabilitiesPCB = () => {
         className="capabilities-pcb__video"
         title="PCB layers exploding visualization"
       >
-        <source src="/videos/PCB_layers_exploding_visualization_20260916220158.webm" type="video/webm" />
-        <source src="/videos/PCB_layers_exploding_visualization_20260916220158.mp4" type="video/mp4" />
+        <source src="/videos/PCB_product_animation_exploded_view_20260919123727.webm" type="video/webm" />
+        <source src="/videos/PCB_product_animation_exploded_view_20260919123727.mp4" type="video/mp4" />
       </video>
     </div>
   )

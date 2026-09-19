@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { 
   Factory, 
   Car, 
@@ -15,54 +16,63 @@ import './IndustriesSection.css';
 
 const industries = [
   {
+    slug: "industrial-automation",
     title: "Industrial Automation",
     description: "Reliable electronics for smarter industrial systems.",
     image: "/images/industries/industry-industrial-automation.webp",
     icon: Factory
   },
   {
+    slug: "automotive-mobility",
     title: "Automotive",
     description: "High-performance electronics for next-generation mobility.",
     image: "/images/industries/industry-automotive.webp",
     icon: Car
   },
   {
+    slug: "medical-devices",
     title: "Medical Devices",
     description: "Precision electronics for life-critical applications.",
     image: "/images/industries/industry-medical-devices.webp",
     icon: Activity
   },
   {
+    slug: "iot-connected-hardware",
     title: "IoT & Connected Devices",
     description: "Smarter, connected hardware for a more intelligent world.",
     image: "/images/industries/industry-iot.webp",
     icon: Wifi
   },
   {
+    slug: "ev-charging-infrastructure",
     title: "EV & Charging",
     description: "Power electronics for a cleaner, greener future.",
     image: "/images/industries/industry-ev-charging.webp",
     icon: Zap
   },
   {
+    slug: "power-electronics",
     title: "Power Electronics",
     description: "Efficient, high-reliability electronics for demanding power systems.",
     image: "/images/industries/industry-power-electronics.webp",
     icon: Cpu
   },
   {
+    slug: "robotics-automation",
     title: "Robotics",
     description: "Advanced control electronics for intelligent machines.",
     image: "/images/industries/industry-robotics.webp",
     icon: Settings
   },
   {
+    slug: "wireless-rf",
     title: "Wireless & RF",
     description: "High-frequency solutions for a connected tomorrow.",
     image: "/images/industries/industry-wireless-rf.webp",
     icon: Radio
   },
   {
+    slug: "consumer-electronics",
     title: "Consumer Electronics",
     description: "Innovative electronics for everyday products.",
     image: "/images/industries/industry-consumer-electronics.webp",
@@ -162,7 +172,7 @@ const IndustryCard = ({ industry }) => {
   const IconComponent = industry.icon;
   
   return (
-    <div className="new-industry-card">
+    <Link to={`/industries/${industry.slug}`} className="new-industry-card">
       <div className="new-industry-card-image-wrapper">
         <img 
           src={industry.image} 
@@ -181,7 +191,7 @@ const IndustryCard = ({ industry }) => {
         </div>
         <div className="new-industry-card-arrow">→</div>
       </div>
-    </div>
+    </Link>
   );
 };
 

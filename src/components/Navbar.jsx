@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { 
   User,
   LogIn,
@@ -28,25 +28,25 @@ const servicesDropdown = [
     icon: Layers,
     title: 'PCB Design & Layout',
     desc: 'High-speed, RF, multi-layer & flex layout',
-    link: '#services'
+    link: '/services/pcb-design'
   },
   {
     icon: Factory,
     title: 'Precision Fabrication',
-    desc: '2–16+ layer rapid turn & mass production',
-    link: '#capabilities'
+    desc: '2–32+ layer rapid turn & mass production',
+    link: '/services/pcb-fabrication'
   },
   {
     icon: Cpu,
     title: 'SMT & Turnkey Assembly',
     desc: 'Automated Pick & Place with AOI / X-Ray',
-    link: '#manufacturing'
+    link: '/services/pcb-assembly'
   },
   {
     icon: ShieldCheck,
-    title: 'Component Sourcing & QA',
-    desc: 'Traceable components & BOM optimization',
-    link: '#process'
+    title: 'Component Sourcing & Box Build',
+    desc: 'Traceable components, testing & integration',
+    link: '/services/component-sourcing-box-build'
   }
 ]
 
@@ -55,25 +55,25 @@ const industriesDropdown = [
     icon: Factory,
     title: 'Industrial Automation',
     desc: 'Rugged controllers & smart factory robotics',
-    link: '#industries'
+    link: '/industries/industrial-automation'
   },
   {
     icon: Car,
     title: 'Automotive & EV Mobility',
     desc: 'High-reliability power & battery systems',
-    link: '#industries'
+    link: '/industries/automotive-mobility'
   },
   {
     icon: Activity,
     title: 'Medical Devices',
     desc: 'Life-critical precision & diagnostic hardware',
-    link: '#industries'
+    link: '/industries/medical-devices'
   },
   {
     icon: Wifi,
-    title: 'IoT & Wireless Systems',
+    title: 'IoT & Connected Hardware',
     desc: 'Connected hardware, sensors & RF electronics',
-    link: '#industries'
+    link: '/industries/iot-connected-hardware'
   }
 ]
 
@@ -108,11 +108,18 @@ const Navbar = () => {
   const { openLogin, isAuthenticated, currentUser } = useAuth()
   const { openQuoteModal } = useQuote()
   const location = useLocation()
+  const navigate = useNavigate()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [mobileExpanded, setMobileExpanded] = useState(null)
   
-  // Determine if we're on light theme pages (About, Contact, Resources)
-  const isLightNav = location.pathname === '/about' || location.pathname === '/contact' || location.pathname.startsWith('/resources')
+  // Determine if we're on light theme pages (About, Contact, Resources, Services, Industries, Portal, Admin)
+  const isLightNav = location.pathname === '/about' || 
+                     location.pathname === '/contact' || 
+                     location.pathname.startsWith('/resources') || 
+                     location.pathname.startsWith('/services') || 
+                     location.pathname.startsWith('/industries') ||
+                     location.pathname === '/portal' ||
+                     location.pathname === '/admin'
 
   useEffect(() => {
     if (mobileMenuOpen) {
@@ -153,22 +160,18 @@ const Navbar = () => {
         
         {/* Navigation Links with Hover Dropdowns */}
         <ul className="navbar-nav">
-          <li className={`nav-item ${location.pathname === '/' ? 'active' : ''}`}>
-            <Link to="/">Home</Link>
-          </li>
-
           {/* Services with Dropdown */}
-          <li className="nav-item has-dropdown">
-            <a href="#services" className="nav-link-dropdown">
+          <li className={`nav-item has-dropdown ${location.pathname.startsWith('/services') ? 'active' : ''}`}>
+            <Link to="/services/pcb-design" className="nav-link-dropdown">
               <span>Services</span>
               <ChevronDown size={14} className="nav-chevron" />
-            </a>
+            </Link>
             <div className="nav-dropdown-menu">
               <div className="nav-dropdown-grid">
                 {servicesDropdown.map((item, index) => {
                   const IconComp = item.icon
                   return (
-                    <a key={index} href={item.link} className="nav-dropdown-item">
+                    <Link key={index} to={item.link} className="nav-dropdown-item">
                       <div className="nav-dropdown-icon">
                         <IconComp size={18} />
                       </div>
@@ -177,7 +180,7 @@ const Navbar = () => {
                         <div className="nav-dropdown-desc">{item.desc}</div>
                       </div>
                       <ChevronRight size={14} className="nav-dropdown-arrow" />
-                    </a>
+                    </Link>
                   )
                 })}
               </div>
@@ -185,17 +188,17 @@ const Navbar = () => {
           </li>
 
           {/* Industries with Dropdown */}
-          <li className="nav-item has-dropdown">
-            <a href="#industries" className="nav-link-dropdown">
+          <li className={`nav-item has-dropdown ${location.pathname.startsWith('/industries') ? 'active' : ''}`}>
+            <Link to="/industries/industrial-automation" className="nav-link-dropdown">
               <span>Industries</span>
               <ChevronDown size={14} className="nav-chevron" />
-            </a>
+            </Link>
             <div className="nav-dropdown-menu">
               <div className="nav-dropdown-grid">
                 {industriesDropdown.map((item, index) => {
                   const IconComp = item.icon
                   return (
-                    <a key={index} href={item.link} className="nav-dropdown-item">
+                    <Link key={index} to={item.link} className="nav-dropdown-item">
                       <div className="nav-dropdown-icon">
                         <IconComp size={18} />
                       </div>
@@ -204,7 +207,7 @@ const Navbar = () => {
                         <div className="nav-dropdown-desc">{item.desc}</div>
                       </div>
                       <ChevronRight size={14} className="nav-dropdown-arrow" />
-                    </a>
+                    </Link>
                   )
                 })}
               </div>
@@ -260,7 +263,13 @@ const Navbar = () => {
         <div className="navbar-actions">
           <button 
             className={`nav-login-btn ${isAuthenticated ? 'logged-in' : ''} ${currentUser?.role === 'admin' ? 'is-admin' : ''}`}
-            onClick={() => openLogin(currentUser ? currentUser.role : 'user')}
+            onClick={() => {
+              if (isAuthenticated) {
+                navigate(currentUser?.role === 'admin' ? '/admin' : '/portal')
+              } else {
+                openLogin(currentUser ? currentUser.role : 'user')
+              }
+            }}
             aria-label="User and Admin Login"
           >
             {currentUser?.role === 'admin' ? (
@@ -295,22 +304,19 @@ const Navbar = () => {
       {/* Mobile Menu Drawer */}
       <div className={`mobile-menu ${mobileMenuOpen ? 'open' : ''}`}>
         <div className="mobile-menu-header">
-          <div className="navbar-logo">
+          <Link to="/" className="navbar-logo" onClick={closeMobileMenu} aria-label="ATRONICS Home">
             <img 
               src={isLightNav ? "/images/logo-light.png" : "/images/logo.webp"} 
               alt="ATRONICS Logo" 
               className="navbar-logo-img" 
             />
-          </div>
+          </Link>
         </div>
 
         <ul className="mobile-nav-list">
-          <li className={`mobile-nav-item ${location.pathname === '/' ? 'active' : ''}`}>
-            <Link to="/" onClick={closeMobileMenu}>Home</Link>
-          </li>
 
           {/* Mobile Services Accordion */}
-          <li className="mobile-nav-item">
+          <li className={`mobile-nav-item ${location.pathname.startsWith('/services') ? 'active' : ''}`}>
             <a 
               href="#services" 
               onClick={(e) => toggleMobileAccordion('services', e)}
@@ -322,17 +328,17 @@ const Navbar = () => {
             {mobileExpanded === 'services' && (
               <div className="mobile-subnav">
                 {servicesDropdown.map((sub, i) => (
-                  <a key={i} href={sub.link} onClick={closeMobileMenu} className="mobile-subnav-item">
+                  <Link key={i} to={sub.link} onClick={closeMobileMenu} className="mobile-subnav-item">
                     <sub.icon size={15} />
                     <span>{sub.title}</span>
-                  </a>
+                  </Link>
                 ))}
               </div>
             )}
           </li>
 
           {/* Mobile Industries Accordion */}
-          <li className="mobile-nav-item">
+          <li className={`mobile-nav-item ${location.pathname.startsWith('/industries') ? 'active' : ''}`}>
             <a 
               href="#industries" 
               onClick={(e) => toggleMobileAccordion('industries', e)}
@@ -344,10 +350,10 @@ const Navbar = () => {
             {mobileExpanded === 'industries' && (
               <div className="mobile-subnav">
                 {industriesDropdown.map((sub, i) => (
-                  <a key={i} href={sub.link} onClick={closeMobileMenu} className="mobile-subnav-item">
+                  <Link key={i} to={sub.link} onClick={closeMobileMenu} className="mobile-subnav-item">
                     <sub.icon size={15} />
                     <span>{sub.title}</span>
-                  </a>
+                  </Link>
                 ))}
               </div>
             )}

@@ -2,7 +2,6 @@ import React from 'react'
 import Navbar from '../components/Navbar'
 import AtronicsHero from '../components/AtronicsHero'
 import AtronicsServicesSection from '../components/AtronicsServicesSection'
-import AtronicsIndustriesSection from '../components/AtronicsIndustriesSection'
 import AtronicsCapabilitiesSection from '../components/AtronicsCapabilitiesSection'
 import AtronicsManufacturingSection from '../components/AtronicsManufacturingSection'
 import AtronicsProcessSection from '../components/AtronicsProcessSection'
@@ -18,7 +17,6 @@ function HomePage() {
       <Navbar />
       <AtronicsHero />
       <AtronicsServicesSection />
-      <AtronicsIndustriesSection />
       <AtronicsCapabilitiesSection />
       <AtronicsManufacturingSection />
       <AtronicsProcessSection />

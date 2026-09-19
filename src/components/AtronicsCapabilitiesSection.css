@@ -32,15 +32,15 @@
 
 .capabilities-section__container {
   position: relative;
-  max-width: 1640px;
+  max-width: 1720px;
   margin: 0 auto;
-  padding: 80px 75px;
+  padding: 80px 48px;
   z-index: 1;
 }
 
 .capabilities-section__main-grid {
   display: grid;
-  grid-template-columns: 1fr 1.22fr 0.8fr;
+  grid-template-columns: 1.18fr 1.12fr 0.82fr;
   gap: 32px;
   align-items: center;
   margin-bottom: 38px;
@@ -49,6 +49,10 @@
 .capabilities-section__left {
   display: flex;
   flex-direction: column;
+  min-width: 0;
+  width: 100%;
+  position: relative;
+  z-index: 10;
 }
 
 .capabilities-section__center {
@@ -56,22 +60,29 @@
   align-items: center;
   justify-content: center;
   position: relative;
+  width: 100%;
+  min-width: 0;
+  z-index: 1;
 }
 
 .capabilities-section__right {
   display: flex;
   align-items: flex-start;
   justify-content: center;
+  min-width: 0;
+  width: 100%;
+  position: relative;
+  z-index: 10;
 }
 
 /* Large Desktop */
 @media (max-width: 1599px) {
   .capabilities-section__container {
-    padding: 70px 50px;
+    padding: 70px 40px;
   }
 
   .capabilities-section__main-grid {
-    grid-template-columns: 1fr 1.2fr 0.82fr;
+    grid-template-columns: 1.15fr 1.1fr 0.85fr;
     gap: 28px;
   }
 }
@@ -79,12 +90,12 @@
 /* Desktop */
 @media (max-width: 1399px) {
   .capabilities-section__container {
-    padding: 60px 40px;
+    padding: 60px 32px;
   }
 
   .capabilities-section__main-grid {
-    grid-template-columns: 1fr 1.15fr 0.85fr;
-    gap: 26px;
+    grid-template-columns: 1.15fr 1.05fr 0.88fr;
+    gap: 24px;
   }
 }
 

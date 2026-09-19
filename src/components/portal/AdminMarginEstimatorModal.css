@@ -1,0 +1,301 @@
+/* ========================================================
+   ADMIN MARGIN PRICING ENGINE MODAL
+   ======================================================== */
+
+.margin-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(8px);
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.margin-modal-card {
+  background: #FFFFFF;
+  border-radius: 20px;
+  max-width: 980px;
+  width: 100%;
+  max-height: 92vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 25px 60px rgba(15, 23, 42, 0.25);
+  border: 1px solid #E2E8F0;
+  padding: 32px 36px;
+}
+
+.margin-close-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background: #F1F5F9;
+  border: none;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748B;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.margin-close-btn:hover {
+  background: #E2E8F0;
+  color: #0F172A;
+  transform: rotate(90deg);
+}
+
+.margin-badge-top {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #EFF6FF;
+  color: #087BFF;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+  border: 1px solid #BFDBFE;
+}
+
+.margin-title {
+  font-size: 24px;
+  font-weight: 850;
+  color: #0F172A;
+  margin: 0 0 4px 0;
+}
+
+.margin-subtitle {
+  font-size: 13.5px;
+  color: #64748B;
+  margin: 0 0 22px 0;
+}
+
+/* Two Column */
+.margin-grid-two-col {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 24px;
+}
+
+@media (max-width: 800px) {
+  .margin-grid-two-col {
+    grid-template-columns: 1fr;
+  }
+}
+
+.m-section-title {
+  font-size: 11px;
+  font-weight: 800;
+  color: #64748B;
+  letter-spacing: 0.5px;
+  margin: 0 0 14px 0;
+}
+
+.m-form-row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.m-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.m-form-group label {
+  font-size: 11.5px;
+  font-weight: 750;
+  color: #475569;
+}
+
+.m-form-group input,
+.m-form-group select {
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 13px;
+  color: #0F172A;
+  outline: none;
+}
+
+.m-form-group input:focus,
+.m-form-group select:focus {
+  border-color: #087BFF;
+}
+
+.dim-inputs {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dim-inputs input {
+  width: 50%;
+}
+
+.dim-inputs span {
+  color: #94A3B8;
+  font-weight: 700;
+}
+
+/* Margin Slider */
+.margin-slider-box {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 16px;
+  margin-top: 14px;
+}
+
+.slider-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.slider-header label {
+  font-size: 12px;
+  font-weight: 800;
+  color: #0F172A;
+}
+
+.margin-pct-tag {
+  font-size: 16px;
+  font-weight: 900;
+  color: #087BFF;
+  background: #EFF6FF;
+  padding: 2px 10px;
+  border-radius: 6px;
+  border: 1px solid #BFDBFE;
+}
+
+.margin-range-slider {
+  width: 100%;
+  accent-color: #087BFF;
+  cursor: pointer;
+}
+
+.slider-limits {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  color: #64748B;
+  margin-top: 6px;
+}
+
+/* Right Cost Breakdown */
+.factory-cost-card {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.cost-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11.5px;
+  color: #475569;
+}
+
+.cost-row strong {
+  color: #0F172A;
+}
+
+.factory-cost-total-strip {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+  border-top: 1px dashed #CBD5E1;
+  font-size: 12px;
+  font-weight: 800;
+  color: #0F172A;
+}
+
+/* Selling Price Banner */
+.selling-price-banner {
+  background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
+  border: 1px solid #BFDBFE;
+  border-radius: 12px;
+  padding: 18px;
+  margin-bottom: 18px;
+}
+
+.sp-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.sp-label {
+  font-size: 11px;
+  font-weight: 850;
+  color: #1E40AF;
+  letter-spacing: 0.5px;
+}
+
+.sp-sub {
+  font-size: 10.5px;
+  color: #059669;
+  font-weight: 750;
+}
+
+.sp-amount {
+  font-size: 26px;
+  font-weight: 900;
+  color: #087BFF;
+  margin-bottom: 6px;
+}
+
+.sp-profit {
+  font-size: 11.5px;
+  color: #334155;
+}
+
+.sp-profit strong {
+  color: #059669;
+}
+
+.btn-apply-to-quote {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #087BFF;
+  color: #FFFFFF;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 13.5px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(8, 123, 255, 0.25);
+}
+
+.btn-apply-to-quote:hover {
+  background: #0066D6;
+  transform: translateY(-1px);
+}

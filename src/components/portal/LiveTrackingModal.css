@@ -1,0 +1,348 @@
+/* ========================================================
+   LIVE GPS COURIER TRACKING MODAL
+   ======================================================== */
+
+.tracking-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(8px);
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.tracking-modal-card {
+  background: #FFFFFF;
+  border-radius: 20px;
+  max-width: 900px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 25px 60px rgba(15, 23, 42, 0.25);
+  border: 1px solid #E2E8F0;
+  padding: 32px 36px;
+}
+
+.tracking-close-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background: #F1F5F9;
+  border: none;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748B;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tracking-close-btn:hover {
+  background: #E2E8F0;
+  color: #0F172A;
+  transform: rotate(90deg);
+}
+
+.tracking-badge-top {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #EFF6FF;
+  color: #087BFF;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+  border: 1px solid #BFDBFE;
+}
+
+.pulse-icon {
+  animation: pulse 1.5s infinite;
+}
+
+.tracking-title {
+  font-size: 24px;
+  font-weight: 850;
+  color: #0F172A;
+  margin: 0 0 4px 0;
+}
+
+.tracking-subtitle {
+  font-size: 13.5px;
+  color: #64748B;
+  margin: 0 0 22px 0;
+}
+
+/* Hero Card */
+.tracking-hero-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 14px;
+  padding: 20px 24px;
+  margin-bottom: 20px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.awb-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.carrier-name {
+  font-size: 12px;
+  font-weight: 800;
+  color: #087BFF;
+  text-transform: uppercase;
+  background: #EFF6FF;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.awb-num {
+  font-size: 13px;
+  font-family: monospace;
+  font-weight: 750;
+  color: #475569;
+}
+
+.hero-status-heading {
+  font-size: 20px;
+  font-weight: 850;
+  color: #0F172A;
+  margin-bottom: 4px;
+}
+
+.route-endpoints {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  color: #64748B;
+}
+
+.route-arrow {
+  color: #087BFF;
+  font-weight: 800;
+}
+
+.eta-badge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-radius: 10px;
+  padding: 12px 18px;
+  color: #087BFF;
+}
+
+.eta-lbl {
+  font-size: 10px;
+  font-weight: 800;
+  color: #1E40AF;
+  letter-spacing: 0.5px;
+}
+
+.eta-val {
+  font-size: 14px;
+  font-weight: 850;
+  color: #0F172A;
+}
+
+/* Map Simulation */
+.interactive-map-simulation {
+  border: 1px solid #CBD5E1;
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 24px;
+  background: #0F172A;
+}
+
+.map-grid-bg {
+  position: relative;
+  height: 160px;
+  background-color: #0F172A;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 0);
+  background-size: 20px 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 40px;
+}
+
+.map-route-line {
+  position: absolute;
+  top: 50%;
+  left: 80px;
+  right: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #10B981 0%, #087BFF 60%, rgba(255, 255, 255, 0.2) 100%);
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.map-pin {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.pin-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #1E293B;
+  border: 2px solid #64748B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #94A3B8;
+  transition: all 0.3s ease;
+}
+
+.map-pin.active .pin-circle {
+  background: #087BFF;
+  border-color: #FFFFFF;
+  color: #FFFFFF;
+  box-shadow: 0 0 20px rgba(8, 123, 255, 0.6);
+}
+
+.pin-truck {
+  background: #087BFF !important;
+  color: #FFFFFF !important;
+}
+
+.pin-pulse {
+  position: absolute;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(8, 123, 255, 0.4);
+  animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+  z-index: -1;
+}
+
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.pin-label {
+  font-size: 11px;
+  font-weight: 750;
+  color: #F8FAFC;
+  background: rgba(15, 23, 42, 0.8);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.map-bottom-strip {
+  display: flex;
+  justify-content: space-between;
+  background: #1E293B;
+  padding: 10px 18px;
+  font-size: 11px;
+  color: #94A3B8;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.map-bottom-strip strong {
+  color: #FFFFFF;
+}
+
+/* Vertical Checkpoints */
+.checkpoints-title {
+  font-size: 11px;
+  font-weight: 800;
+  color: #64748B;
+  letter-spacing: 0.5px;
+  margin: 0 0 14px 0;
+}
+
+.checkpoints-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.checkpoint-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.step-marker {
+  color: #10B981;
+  margin-top: 2px;
+}
+
+.dot-pending {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #E2E8F0;
+  border: 2px solid #CBD5E1;
+  margin: 2px 2px 0;
+}
+
+.step-content {
+  flex: 1;
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  padding: 10px 14px;
+}
+
+.checkpoint-step.pending .step-content {
+  opacity: 0.6;
+}
+
+.step-title-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 2px;
+}
+
+.step-title {
+  font-size: 12.5px;
+  color: #0F172A;
+}
+
+.step-time {
+  font-size: 11px;
+  color: #64748B;
+  font-weight: 600;
+}
+
+.step-location {
+  font-size: 11px;
+  color: #64748B;
+}
